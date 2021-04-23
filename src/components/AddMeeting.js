@@ -52,10 +52,6 @@ const AddMeeting=(props) =>{
     };
     const handleMeetingSubmit=()=>{
         let currentTime=new Date();
-        if(selectedDate.getTime()<currentTime.getTime()){
-            setEndError('Date Cannot be Past')
-            return
-        }
         if(currentTime.getTime()>startTime.getTime()){
             setStartError('Cannot add meeting for past time')
             return
