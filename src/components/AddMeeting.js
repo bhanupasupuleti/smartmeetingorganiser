@@ -52,7 +52,7 @@ const AddMeeting=(props) =>{
     };
     const handleMeetingSubmit=()=>{
         let currentTime=new Date();
-        if(Date.parse(selectedDate)-Date.parse(currentTime)>0){
+        if(selectedDate.getTime()<currentTime.getTime()){
             setEndError('Date Cannot be Past')
             return
         }
